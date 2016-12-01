@@ -99,6 +99,13 @@
                                     <action selector="answerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MWM-Qv-naN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try Again!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ku-mU-Jyx">
+                                <rect key="frame" x="132" y="206" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -125,14 +132,52 @@
                     </view>
                     <connections>
                         <outlet property="questionLabel" destination="yPu-rO-7bt" id="a4Y-LZ-149"/>
+                        <outlet property="resultLabel" destination="4Ku-mU-Jyx" id="ZbC-F7-7ni"/>
+                        <segue destination="hkB-2c-xre" kind="show" identifier="showImageVC" id="ZJs-yq-fHD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
+        <!--End GameVC-->
+        <scene sceneID="1Nc-cx-1yK">
+            <objects>
+                <viewController id="hkB-2c-xre" customClass="EndGameVC" customModule="Watch_the_Throne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Geo-ap-ZRu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xw0-dk-ypo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U25-TR-ZXM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-Og-OsX">
+                                <rect key="frame" x="166" y="104" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="halloffaces.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="54V-QC-7kO">
+                                <rect key="frame" x="0.0" y="203" width="375" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="54V-QC-7kO" id="gCm-Qg-CyV"/>
+                        <outlet property="scoreLabel" destination="EoI-Og-OsX" id="6jq-QO-J2I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qrq-dN-dAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="139.880059970015"/>
+        </scene>
     </scenes>
     <resources>
         <image name="GoTbanner.jpg" width="2048" height="1024"/>
+        <image name="halloffaces.jpg" width="300" height="169"/>
     </resources>
 </document>

@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     
+    @IBOutlet weak var resultLabel: UILabel!
     //practice dummy data
     let questions = ["Where are you traveling to in 2017?", "Favorite snack?", "Fav movie?", "fav british series"]
     let answers = [["New York", "Cuba", "Japan", "Sweden"], ["Chips?", "Popcorn?", " Peanuts", "Bell Peppers"], ["Do the right thing", "all about eve", "love actually", "the pianist"], ["luther", "chewing gum", "misfits", "footballer's wives"]]
@@ -22,9 +23,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        newQuestion()
+        resultLabel.isHidden = true
+        
     }
-    
     
     @IBAction func answerButtonTapped(_ sender: AnyObject) {
         
@@ -32,25 +35,18 @@ class ViewController: UIViewController {
             questionLabel.text = "Correct!"
             point += 1
         } else {
-            questionLabel.text = "Try Again"
+            resultLabel.isHidden = false
+            resultLabel.text = "You "
         }
         
-        if currentQuestion != questions.count{
+        if currentQuestion != questions.count && sender.tag == Int(rightAnswerPlacement){
             newQuestion()
         }
         
-    }
-    
-    func endGame() {
-        
-        if currentQuestion == questions.count {
-            //text label on next vc == points/questions.count 
+        if currentQuestion == questions.count && sender.tag == Int(rightAnswerPlacement) {
+            performSegue(withIdentifier: "showImageVC", sender: self)
             
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        newQuestion()
     }
     
     func newQuestion() {
@@ -79,9 +75,10 @@ class ViewController: UIViewController {
         }
         
         currentQuestion += 1
+        resultLabel.isHidden = true
         
     }
     
-    
 }
+
 
