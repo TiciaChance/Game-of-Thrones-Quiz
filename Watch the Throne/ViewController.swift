@@ -8,11 +8,6 @@
 
 import UIKit
 
-protocol SendPointsDelegate {
-    func usersPoints(points: Int)
-}
-
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -38,11 +33,15 @@ class ViewController: UIViewController {
     var rightAnswerPlacement: UInt32 = 0
     var points = 0
     
-    var delegate: SendPointsDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        newQuestion()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        currentQuestion = 0
         newQuestion()
     }
     
@@ -51,6 +50,7 @@ class ViewController: UIViewController {
         if sender.tag == Int(rightAnswerPlacement) && currentQuestion != questions.count{
             points += 1
             print(points)
+            
             newQuestion()
         } else if sender.tag != Int(rightAnswerPlacement) && currentQuestion != questions.count{
             newQuestion()
@@ -58,6 +58,14 @@ class ViewController: UIViewController {
              performSegue(withIdentifier: "showImageVC", sender: self)
         } else if sender.tag == Int(rightAnswerPlacement) && currentQuestion == questions.count {
             performSegue(withIdentifier: "showImageVC", sender: self)
+
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showImageVC" {
+            let VC = segue.destination as! PointsVC
+            VC.score = "Your score: \(points)/\(questions.count)"
         }
     }
     

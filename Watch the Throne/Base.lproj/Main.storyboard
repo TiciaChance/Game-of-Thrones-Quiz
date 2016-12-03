@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="width" constant="300" id="MuO-pQ-ZvQ"/>
                                     <constraint firstAttribute="height" constant="60" id="YPL-89-fTT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.88618987798690796" green="0.88633555173873901" blue="0.88615894317626953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="height" constant="69" id="mny-G9-F5R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.83521419763565063" green="0.83535194396972656" blue="0.83518487215042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raD-gl-6ZB">
@@ -61,7 +61,7 @@
                                     <constraint firstAttribute="width" constant="300" id="OCM-rC-Bqv"/>
                                     <constraint firstAttribute="height" constant="60" id="cZ2-ni-aIp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.88618987800000004" green="0.8863355517" blue="0.88615894319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -76,7 +76,7 @@
                                     <constraint firstAttribute="width" constant="300" id="ZaA-Zt-CcF"/>
                                     <constraint firstAttribute="height" constant="60" id="oMT-Sf-xjx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.88618987800000004" green="0.8863355517" blue="0.88615894319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -91,7 +91,7 @@
                                     <constraint firstAttribute="height" constant="60" id="KYV-sd-Nna"/>
                                     <constraint firstAttribute="width" constant="300" id="b7O-N9-Vj7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.88618987800000004" green="0.8863355517" blue="0.88615894319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -149,16 +149,40 @@
                                 <rect key="frame" x="0.0" y="203" width="375" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-Og-OsX">
-                                <rect key="frame" x="142" y="93" width="90" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-Og-OsX">
+                                <rect key="frame" x="16" y="61" width="343" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Cn2-5r-Tc3"/>
+                                    <constraint firstAttribute="width" constant="343" id="Jbg-1L-Gba"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
+                                <color key="textColor" red="0.88618987798690796" green="0.88633555173873901" blue="0.88615894317626953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqf-97-5P3">
+                                <rect key="frame" x="92" y="560" width="190" height="42"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleColor" red="0.88618987798690796" green="0.88633555173873901" blue="0.88615894317626953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryAgainButtonTapped:" destination="hkB-2c-xre" eventType="touchUpInside" id="LOC-kz-dcM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.043982066214084625" green="0.080649040639400482" blue="0.088935188949108124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EoI-Og-OsX" firstAttribute="top" secondItem="Geo-ap-ZRu" secondAttribute="bottom" constant="41" id="7xS-gA-99D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vqf-97-5P3" secondAttribute="trailing" constant="77" id="FeJ-g0-Ff6"/>
+                            <constraint firstItem="Xw0-dk-ypo" firstAttribute="top" secondItem="vqf-97-5P3" secondAttribute="bottom" constant="65" id="PMl-BJ-sRW"/>
+                            <constraint firstItem="EoI-Og-OsX" firstAttribute="leading" secondItem="U25-TR-ZXM" secondAttribute="leadingMargin" id="QC3-wo-K5h"/>
+                            <constraint firstItem="EoI-Og-OsX" firstAttribute="trailing" secondItem="U25-TR-ZXM" secondAttribute="trailingMargin" id="duM-zm-ouy"/>
+                            <constraint firstItem="vqf-97-5P3" firstAttribute="leading" secondItem="U25-TR-ZXM" secondAttribute="leadingMargin" constant="76" id="mMs-iy-kNe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="usersScoreLabel" destination="EoI-Og-OsX" id="mgn-Fk-Tjy"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="772" y="139.880059970015"/>
