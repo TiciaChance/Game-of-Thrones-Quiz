@@ -99,16 +99,6 @@
                                     <action selector="answerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MWM-Qv-naN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try Again!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ku-mU-Jyx">
-                                <rect key="frame" x="67" y="240" width="240" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="JJS-aO-eOE"/>
-                                    <constraint firstAttribute="height" constant="50" id="Vfs-Ds-Hrh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -117,13 +107,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="mFN-6d-nty" secondAttribute="trailing" constant="22" id="5kR-i5-Uqa"/>
                             <constraint firstItem="yPu-rO-7bt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="E26-wn-qIz"/>
                             <constraint firstItem="Lan-aD-eVA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="F0d-uO-lKb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4Ku-mU-Jyx" secondAttribute="trailing" constant="52" id="F2S-bj-UNH"/>
                             <constraint firstItem="Lan-aD-eVA" firstAttribute="top" secondItem="yPu-rO-7bt" secondAttribute="bottom" constant="100" id="FAI-j6-ObD"/>
                             <constraint firstItem="yPu-rO-7bt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JdO-fB-Vt6"/>
-                            <constraint firstItem="4Ku-mU-Jyx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="LPi-7L-3D6"/>
                             <constraint firstItem="mFN-6d-nty" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="Mk9-vm-VK5"/>
                             <constraint firstItem="bIl-dQ-C0n" firstAttribute="top" secondItem="mFN-6d-nty" secondAttribute="bottom" constant="8" id="Nhv-7T-iGy"/>
-                            <constraint firstItem="4Ku-mU-Jyx" firstAttribute="top" secondItem="Omd-oB-13A" secondAttribute="bottom" constant="40" id="RPx-gW-Jrd"/>
                             <constraint firstAttribute="trailing" secondItem="Omd-oB-13A" secondAttribute="trailing" id="bZe-QQ-Fxl"/>
                             <constraint firstItem="yPu-rO-7bt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="bpD-ay-sKE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="raD-gl-6ZB" secondAttribute="trailing" constant="22" id="cr8-RS-9fd"/>
@@ -138,18 +125,18 @@
                     </view>
                     <connections>
                         <outlet property="questionLabel" destination="yPu-rO-7bt" id="a4Y-LZ-149"/>
-                        <outlet property="resultLabel" destination="4Ku-mU-Jyx" id="ZbC-F7-7ni"/>
-                        <segue destination="hkB-2c-xre" kind="show" identifier="showImageVC" id="ZJs-yq-fHD"/>
+                        <segue destination="hkB-2c-xre" kind="presentation" identifier="showImageVC" id="hqx-5g-9eW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--End GameVC-->
+        <!--PointsVC-->
         <scene sceneID="1Nc-cx-1yK">
             <objects>
-                <viewController id="hkB-2c-xre" customClass="EndGameVC" customModule="Watch_the_Throne" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qrq-dN-dAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="hkB-2c-xre" customClass="PointsVC" customModule="Watch_the_Throne" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Geo-ap-ZRu"/>
                         <viewControllerLayoutGuide type="bottom" id="Xw0-dk-ypo"/>
@@ -172,12 +159,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.043982066214084625" green="0.080649040639400482" blue="0.088935188949108124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="54V-QC-7kO" id="gCm-Qg-CyV"/>
-                        <outlet property="scoreLabel" destination="EoI-Og-OsX" id="6jq-QO-J2I"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qrq-dN-dAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="772" y="139.880059970015"/>
         </scene>

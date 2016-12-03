@@ -7,15 +7,16 @@
 //
 
 import UIKit
-import Social
+
+protocol SendPointsDelegate {
+    func usersPoints(points: Int)
+}
 
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     
-    @IBOutlet weak var resultLabel: UILabel!
-    //practice dummy data
     let questions = ["Which household possesses the banner of a moon and a falcon??",
                      "The phrase \"Hold the door\" is associated with which character?",
                      "What was the name of Catelyn Stark's father?",
@@ -35,31 +36,28 @@ class ViewController: UIViewController {
     
     var currentQuestion = 0
     var rightAnswerPlacement: UInt32 = 0
-    //var points = 0
+    var points = 0
+    
+    var delegate: SendPointsDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         newQuestion()
-        resultLabel.isHidden = true
-        
     }
     
     @IBAction func answerButtonTapped(_ sender: AnyObject) {
         
-        if sender.tag != Int(rightAnswerPlacement) {
-            resultLabel.isHidden = false
-            resultLabel.text = "You know nothing, Jon Snow. Try again!"
-        }
-        
-        if currentQuestion != questions.count && sender.tag == Int(rightAnswerPlacement){
+        if sender.tag == Int(rightAnswerPlacement) && currentQuestion != questions.count{
+            points += 1
+            print(points)
             newQuestion()
-        }
-        
-        if currentQuestion == questions.count && sender.tag == Int(rightAnswerPlacement) {
-           // performSegue(withIdentifier: "showImageVC", sender: self)
-            questionLabel.text = "Winter is here"
-//            resultLabel.isHidden = false
+        } else if sender.tag != Int(rightAnswerPlacement) && currentQuestion != questions.count{
+            newQuestion()
+        } else if sender.tag != Int(rightAnswerPlacement) && currentQuestion == questions.count {
+             performSegue(withIdentifier: "showImageVC", sender: self)
+        } else if sender.tag == Int(rightAnswerPlacement) && currentQuestion == questions.count {
+            performSegue(withIdentifier: "showImageVC", sender: self)
         }
     }
     
@@ -70,7 +68,6 @@ class ViewController: UIViewController {
         
         var button = UIButton()
         var x = 1
-        
         for i in 1...4 {
             
             button = view.viewWithTag(i) as! UIButton
@@ -81,16 +78,10 @@ class ViewController: UIViewController {
                 button.setTitle(answers[currentQuestion][x], for: .normal)
                 x = 2
             }
-            
         }
-        
         if x == 2 {
             button.setTitle(answers[currentQuestion][3], for: .normal)
         }
-        
         currentQuestion += 1
-        resultLabel.isHidden = true
-        
     }
-    
 }
