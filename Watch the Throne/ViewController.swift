@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        points = 0
         currentQuestion = 0
         newQuestion()
     }
@@ -57,8 +58,8 @@ class ViewController: UIViewController {
         } else if sender.tag != Int(rightAnswerPlacement) && currentQuestion == questions.count {
              performSegue(withIdentifier: "showImageVC", sender: self)
         } else if sender.tag == Int(rightAnswerPlacement) && currentQuestion == questions.count {
+            points += 1
             performSegue(withIdentifier: "showImageVC", sender: self)
-
         }
     }
     
@@ -66,8 +67,13 @@ class ViewController: UIViewController {
         if segue.identifier == "showImageVC" {
             let VC = segue.destination as! PointsVC
             VC.score = "Your score: \(points)/\(questions.count)"
+            VC.points = points
         }
     }
+    
+}
+
+extension ViewController {
     
     func newQuestion() {
         

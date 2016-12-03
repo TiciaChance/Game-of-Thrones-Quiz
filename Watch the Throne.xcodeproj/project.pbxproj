@@ -15,6 +15,8 @@
 		11AD3C7A1DEF90A5002AD44B /* GoTbanner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11AD3C791DEF90A5002AD44B /* GoTbanner.jpg */; };
 		11AD3C801DEFA8DD002AD44B /* halloffaces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11AD3C7F1DEFA8DD002AD44B /* halloffaces.jpg */; };
 		11D699A91DF31AA600EFA049 /* PointsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D699A81DF31AA600EFA049 /* PointsVC.swift */; };
+		11D699AB1DF3342D00EFA049 /* JS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11D699AA1DF3342D00EFA049 /* JS.jpg */; };
+		11D699AD1DF3360B00EFA049 /* throne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11D699AC1DF3360B00EFA049 /* throne.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		11AD3C791DEF90A5002AD44B /* GoTbanner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoTbanner.jpg; sourceTree = "<group>"; };
 		11AD3C7F1DEFA8DD002AD44B /* halloffaces.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halloffaces.jpg; sourceTree = "<group>"; };
 		11D699A81DF31AA600EFA049 /* PointsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointsVC.swift; path = ../PointsVC.swift; sourceTree = "<group>"; };
+		11D699AA1DF3342D00EFA049 /* JS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JS.jpg; sourceTree = "<group>"; };
+		11D699AC1DF3360B00EFA049 /* throne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = throne.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				11AD3C6E1DEF8A64002AD44B /* LaunchScreen.storyboard */,
 				11AD3C711DEF8A64002AD44B /* Info.plist */,
 				11AD3C7F1DEFA8DD002AD44B /* halloffaces.jpg */,
+				11D699AA1DF3342D00EFA049 /* JS.jpg */,
+				11D699AC1DF3360B00EFA049 /* throne.jpg */,
 			);
 			path = "Watch the Throne";
 			sourceTree = "<group>";
@@ -105,6 +111,7 @@
 				TargetAttributes = {
 					11AD3C611DEF8A64002AD44B = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TDFXWLD7DJ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +139,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D699AB1DF3342D00EFA049 /* JS.jpg in Resources */,
+				11D699AD1DF3360B00EFA049 /* throne.jpg in Resources */,
 				11AD3C701DEF8A64002AD44B /* LaunchScreen.storyboard in Resources */,
 				11AD3C7A1DEF90A5002AD44B /* GoTbanner.jpg in Resources */,
 				11AD3C801DEFA8DD002AD44B /* halloffaces.jpg in Resources */,
@@ -272,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TDFXWLD7DJ;
 				INFOPLIST_FILE = "Watch the Throne/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.electricchance.Watch-the-Throne";
@@ -284,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TDFXWLD7DJ;
 				INFOPLIST_FILE = "Watch the Throne/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.electricchance.Watch-the-Throne";
