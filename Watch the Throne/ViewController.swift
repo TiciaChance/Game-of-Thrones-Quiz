@@ -18,15 +18,19 @@ class ViewController: UIViewController {
                      "What was the name of Arya's direwolf?",
                      "Who was the first to stab Jon Snow in the Season 5 finale?",
                      "This (possibly) royal character hasn't been seen since Season 3?",
-                     "Who said, \"A very small man can cast a very large shadow\"?"
+                     "Who said, \"A very small man can cast a very large shadow\"?",
+                     "What does \"valar dohaeris\" mean?",
+                     "Name the \"other\" Stark child: Robb, Brandon, Sansa, Arya. Jon Snow and…?"
                      ]
     let answers = [["House Arryn", "House Greyjoy", "House Lannister", "House Karstark"],
                    ["Hodor", "Jon Snow", "Cersei", "Lord Baelish"],
                    ["Lord Hoster", "Lord Arryn", "Lord Tywin", "Lord Edmure"],
                    ["Nymeria", "Summer", "Snow", "Lady"],
                    ["Alliser Thorne", "Olly", "Tormund", "Bowen Marsh"],
-                   ["Gendry", "Joffry", "Margaery", "Jon Snow"],
-                   ["Lord Varys","Tyrion","Jamie Lannister","Ned Stark"]
+                   ["Gendry", "Joffrey", "Margaery", "Jon Snow"],
+                   ["Lord Varys","Tyrion","Jamie Lannister","Ned Stark"],
+                   ["All men must serve", "All men must die", "All men must grow", "All men will learn"],
+                   ["Rickon", "Dickon", "Ramsay", "Tyrell"]
                    ]
     
     var currentQuestion = 0
