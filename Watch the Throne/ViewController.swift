@@ -20,7 +20,8 @@ class ViewController: UIViewController {
                      "This (possibly) royal character hasn't been seen since Season 3?",
                      "Who said, \"A very small man can cast a very large shadow\"?",
                      "What does \"valar dohaeris\" mean?",
-                     "Name the \"other\" Stark child: Robb, Brandon, Sansa, Arya. Jon Snow and…?"
+                     "Name the \"other\" Stark child: Robb, Brandon, Sansa, Arya. Jon Snow (technically) and…?",
+                     "What piece of fencing advice did Jon Snow give to Arya Stark? \"Stick them with the…\""
                      ]
     let answers = [["House Arryn", "House Greyjoy", "House Lannister", "House Karstark"],
                    ["Hodor", "Jon Snow", "Cersei", "Lord Baelish"],
@@ -30,7 +31,8 @@ class ViewController: UIViewController {
                    ["Gendry", "Joffrey", "Margaery", "Jon Snow"],
                    ["Lord Varys","Tyrion","Jamie Lannister","Ned Stark"],
                    ["All men must serve", "All men must die", "All men must grow", "All men will learn"],
-                   ["Rickon", "Dickon", "Ramsay", "Tyrell"]
+                   ["Rickon", "Dickon", "Ramsay", "Tyrell"],
+                   ["Pointy end", "Prickly end", "Soft end", "Rubber end"]
                    ]
     
     var currentQuestion = 0
